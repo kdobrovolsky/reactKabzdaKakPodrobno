@@ -1,20 +1,27 @@
 import { Accordion } from "./components/accordion/Accordion";
-import { Rating } from "./components/accordion/Rating";
+import { OnOff } from './components/onOff/OnOff';
+import { Rating } from "./components/rating/Rating";
+import "./App.css";
+import { useState } from "react";
+import { UnControlledAccordion } from "./components/accordion/UnControlledAccordion";
+import { UnControlledRating } from "./components/rating/UnControlledRating";
 
 export const App = () => {
+  
+
+  
   return (
     <div>
-      <AppTitle title="This is APP component"/>
+      {/* <AppTitle title="This is APP component"/> */}
       <Rating value={3} />
-      <Accordion title="Menu" collapsed={true} />
-      <Accordion title="Users" collapsed={false} />
-      <Rating value={0} />
-      <Rating value={1} />
-      <Rating value={2} />
-      <Rating value={3} />
-      <Rating value={4} />
-      <Rating value={5} />
+      {/* <Accordion title="Menu" collapsed={true} />
+      <Accordion title="Users" collapsed={false} /> */}
+      <UnControlledAccordion title="This is APP comp"/>
+      <UnControlledRating/>
 
+      <OnOff/>
+      <OnOff/>
+      
     </div>
   );
 };

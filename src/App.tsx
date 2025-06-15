@@ -1,42 +1,31 @@
-import { Accordion } from "./components/accordion/Accordion";
-import { OnOff } from './components/onOff/OnOff';
-import { Rating } from "./components/rating/Rating";
+import { OnOff } from "./components/onOff/OnOff";
 import "./App.css";
-import { useState } from "react";
 import { UnControlledAccordion } from "./components/accordion/UnControlledAccordion";
 import { UnControlledRating } from "./components/rating/UnControlledRating";
+import { useState } from "react";
+import { Accordion } from "./components/accordion/Accordion";
+import { Rating, RatingValueType } from "./components/rating/Rating";
 
 export const App = () => {
   
+  let[ratingValue, setRatingValue] = useState<RatingValueType>(4)
+  let[accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
 
-  
+ 
   return (
-    <div>
-      {/* <AppTitle title="This is APP component"/> */}
-      <Rating value={3} />
-      {/* <Accordion title="Menu" collapsed={true} />
-      <Accordion title="Users" collapsed={false} /> */}
-      <UnControlledAccordion title="This is APP comp"/>
+    <div className="App">
+      <OnOff />
+      <Rating value={ratingValue} onClick={setRatingValue}/>
+      <Accordion title={"12123"} collapsed={accordionCollapsed} onClick = {setAccordionCollapsed}/>
+      {/* <UnControlledAccordion title="This is APP comp" /> */}
       <UnControlledRating/>
-
-      <OnOff/>
-      <OnOff/>
-      
     </div>
   );
 };
-
-
 export type AppTitlePropsType = {
-  title: string
-}
-
-export const AppTitle = ({title}:AppTitlePropsType) => {
-  return <h3>{title}</h3>;
+  title: string;
 };
 
-
-
-
-
-
+export const AppTitle = ({ title }: AppTitlePropsType) => {
+  return <h3>{title}</h3>;
+};

@@ -1,15 +1,18 @@
 import { AccordionBody } from "./AccordionBody";
 import { AccordionTitle } from "./AccordionTitle";
 
+
+
 type AccordionPropsType = {
   title: string;
   collapsed: boolean;
+  onClick: (boolean: boolean) => void
 };
 
-export const Accordion = ({ title, collapsed }: AccordionPropsType) => {
+export const Accordion = ({ title, collapsed,onClick }: AccordionPropsType) => {
   return (
     <div>
-      <AccordionTitle title={title} />
+      <AccordionTitle title={title} onClick={()=>onClick(!collapsed)}/>
       {!collapsed && <AccordionBody />}
     </div>
   );

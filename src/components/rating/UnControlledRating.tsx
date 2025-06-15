@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import{ useState } from 'react';
 
 type UnControlledRatingPropsType = {
    
@@ -26,13 +26,8 @@ export const UnControlledRating = ({}:UnControlledRatingPropsType) => {
   };
   
   export const Star = ({ selected,onClick}: StarPropsType) => {
-    if (selected) {
-      return (
-        <span onClick={onClick}>
-          <b>star</b>{" "}
-        </span>
-      );
-    } else {
-      return <span onClick={onClick}>star </span>;
-    }
+   return <span onClick={onClick}>{selected? <b>star</b>: 'star'} </span>
+  
+    
+  
 };

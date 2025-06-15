@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AccordionTitle } from './AccordionTitle';
 import { AccordionBody } from './AccordionBody';
 
@@ -9,9 +9,6 @@ export type UnControlledAccordionPropsType = {
 export const UnControlledAccordion = ({title,}:UnControlledAccordionPropsType) => {
   
   const [collapsed, setCollapsed] = useState(false)
-
-  
-
  return (
   <div >
   <AccordionTitle title={title} onClick={()=>setCollapsed(!collapsed)}/>

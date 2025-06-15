@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Accordion } from "./components/accordion/Accordion";
 import { Rating, RatingValueType } from "./components/rating/Rating";
 import { OnOff } from "./components/onOff/OnOff";
+import { UnControlledInput } from "./components/input/UnControlledInput";
 
 export const App = () => {
   let [ratingValue, setRatingValue] = useState<RatingValueType>(4);
@@ -14,7 +15,7 @@ export const App = () => {
 
   return (
     <div className="App">
-      <UnControlledOnOff />
+      {/* <UnControlledOnOff />
       <Rating value={ratingValue} onClick={setRatingValue} />
       <Accordion
         title={"12123"}
@@ -23,10 +24,18 @@ export const App = () => {
       />
       <UnControlledAccordion title="This is APP comp" />
       <UnControlledRating />
-      <OnOff onOff={onOff} onClick={setOnOff} />
+      <OnOff onOff={onOff} onClick={setOnOff} /> */}
+
+
+      <UnControlledInput/>
     </div>
   );
 };
+
+
+
+
+
 export type AppTitlePropsType = {
   title: string;
 };

@@ -7,6 +7,9 @@ import { Accordion } from "./components/accordion/Accordion";
 import { Rating, RatingValueType } from "./components/rating/Rating";
 import { OnOff } from "./components/onOff/OnOff";
 import { UnControlledInput } from "./components/input/UnControlledInput";
+import { ControlledInput } from "./components/input/ControlledInput";
+import { ControlledCheckBox } from "./components/input/ControlledCheckBox";
+import { ControlledSelect } from "./components/input/ControlledSelect";
 
 export const App = () => {
   let [ratingValue, setRatingValue] = useState<RatingValueType>(4);
@@ -26,8 +29,10 @@ export const App = () => {
       <UnControlledRating />
       <OnOff onOff={onOff} onClick={setOnOff} /> */}
 
-
+      <ControlledInput/>
       <UnControlledInput/>
+      <ControlledCheckBox/>
+      <ControlledSelect/>
     </div>
   );
 };

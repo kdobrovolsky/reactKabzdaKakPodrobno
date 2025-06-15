@@ -1,17 +1,17 @@
+import { useState } from "react";
 import { Button } from "../Button";
 
-export type OnOffPropsType = {
-  onOff: boolean;
-  onClick: (onOff: boolean) => void;
-};
+export type OnOffPropsType = {};
 
-export const OnOff = ({ onOff, onClick }: OnOffPropsType) => {
+export const UnControlledOnOff = ({}: OnOffPropsType) => {
+  const [onOff, setOnOff] = useState(false);
+
   const buttonClickHandlerTrue = () => {
-    return onClick(true);
+    return setOnOff(true);
   };
 
   const buttonClickHandlerFalse = () => {
-    return onClick(false);
+    return setOnOff(false);
   };
   return (
     <div className="onOff">

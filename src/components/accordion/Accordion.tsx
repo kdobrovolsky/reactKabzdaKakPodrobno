@@ -6,7 +6,7 @@ import { AccordionTitle } from "./AccordionTitle";
 type AccordionPropsType = {
   title: string;
   collapsed: boolean;
-  onClick: (boolean: boolean) => void
+  onClick: (collapsed: boolean) => void
 };
 
 export const Accordion = ({ title, collapsed,onClick }: AccordionPropsType) => {

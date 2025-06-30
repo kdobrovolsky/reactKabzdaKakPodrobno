@@ -1,12 +1,16 @@
+import { ItemType } from "./Accordion";
 
+export type AccordionBodyPropsType ={
+  items: ItemType[]
+  onClick: (value: any) => void
+}
 
-export const AccordionBody = () => {
+export const AccordionBody = ({items ,onClick}:AccordionBodyPropsType) => {
     return (
       <div>
         <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+          {items.map((t, index )=><li onClick={()=>onClick(t.value)} key={index}>{t.title}</li> ) } 
+         
         </ul>
       </div>
     );

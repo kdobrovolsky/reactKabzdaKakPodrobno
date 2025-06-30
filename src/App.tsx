@@ -29,6 +29,21 @@ export const App = () => {
       <UnControlledRating />
       <OnOff onOff={onOff} onClick={setOnOff} /> */}
 
+        <Accordion
+        title={"12123"}
+        collapsed={accordionCollapsed}
+        onChange={setAccordionCollapsed} 
+        
+        items=
+        {[
+            {title: 'Kirill', value: 1,onClick: () => console.log(1)},
+            {title: 'Artem', value: 2,onClick: () => console.log(2)},
+            {title: 'Viktor', value: 3,onClick: () => console.log(3)},
+          ]}     
+          onClick={((id)=>{console.log(`Some item was clicked ${id}` );
+          })}
+         />
+
       <ControlledInput/>
       <UnControlledInput/>
       <ControlledCheckBox/>

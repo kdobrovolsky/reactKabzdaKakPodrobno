@@ -7,8 +7,11 @@ import { ControlledCheckBox } from "./components/input/ControlledCheckBox";
 import { ControlledSelect } from "./components/input/ControlledSelect";
 import { Select } from "./components/Select/Select";
 
+
 export const App = () => {
   let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
+
+  const [value, setValue] = useState(1)
 
   return (
     <div className="App">
@@ -29,8 +32,11 @@ export const App = () => {
       <ControlledInput />
       <UnControlledInput />
       <ControlledCheckBox />
-      <ControlledSelect />
-   
+      <Select value={value} onChange={setValue} items={[
+        { title: "Moscow", value: 1,  },
+        { title: "Minsk", value: 2,  },
+        { title: "Kiev", value: 3, },
+      ]}/>
     </div>
   );
 };

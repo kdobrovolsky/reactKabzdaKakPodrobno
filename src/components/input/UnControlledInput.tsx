@@ -4,10 +4,6 @@ export const UnControlledInput = () => {
     const [value, setValue] = useState('')
     const inputRef = useRef<HTMLInputElement>(null)
     
-    // const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    //     setValue(e.currentTarget.value)
-    // }
-
     const save = () => {
         const el = inputRef.current as HTMLInputElement;
         setValue(el.value)

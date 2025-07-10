@@ -12,7 +12,7 @@ export const UnControlledAccordion = ({title,}:UnControlledAccordionPropsType) =
  return (
   <div >
   <AccordionTitle title={title} onClick={()=>setCollapsed(!collapsed)}/>
-  {!collapsed && <AccordionBody />}
+  {!collapsed && <AccordionBody  />}
   
 </div>
  )

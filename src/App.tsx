@@ -6,6 +6,7 @@ import { ControlledInput } from "./components/input/ControlledInput";
 import { ControlledCheckBox } from "./components/input/ControlledCheckBox";
 import { ControlledSelect } from "./components/input/ControlledSelect";
 import { Select } from "./components/Select/Select";
+import { UnControlledAccordion } from "./components/accordion/UnControlledAccordion";
 
 
 export const App = () => {
@@ -28,7 +29,11 @@ export const App = () => {
           console.log(`Some item was clicked ${id}`);
         }}
       />
-
+      <UnControlledAccordion title={"eeeeeee"} items={[
+          { title: "Kirill", value: 1, onClick: () => console.log(1) },
+          { title: "Artem", value: 2, onClick: () => console.log(2) },
+          { title: "Viktor", value: 3, onClick: () => console.log(3) },
+        ]}/>
       <ControlledInput />
       <UnControlledInput />
       <ControlledCheckBox />

@@ -28,7 +28,6 @@ export const Select = ({ items, value,onChange }: SelectPropsType) => {
     }
 
     if (!active) return;
-
     e.preventDefault();
     const currentIndex = items.findIndex(item => item.value === hoveredElementValue);
 

@@ -4,9 +4,9 @@ import { Accordion } from "./components/accordion/Accordion";
 import { UnControlledInput } from "./components/input/UnControlledInput";
 import { ControlledInput } from "./components/input/ControlledInput";
 import { ControlledCheckBox } from "./components/input/ControlledCheckBox";
-import { ControlledSelect } from "./components/input/ControlledSelect";
 import { Select } from "./components/Select/Select";
 import { UnControlledAccordion } from "./components/accordion/UnControlledAccordion";
+import {Clock} from "./components/clock/Clock.tsx";
 
 
 export const App = () => {
@@ -16,6 +16,7 @@ export const App = () => {
 
   return (
     <div className="App">
+        <Clock/>
       <Accordion
         title={"Menu"}
         collapsed={accordionCollapsed}

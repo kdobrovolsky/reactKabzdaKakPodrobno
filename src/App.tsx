@@ -17,6 +17,8 @@ export const App = () => {
   return (
     <div className="App">
         <Clock/>
+        <Clock mode = {'analog'}/>
+        <Clock mode = {'digital'}/>
       <Accordion
         title={"Menu"}
         collapsed={accordionCollapsed}

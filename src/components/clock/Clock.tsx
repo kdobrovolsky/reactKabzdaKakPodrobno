@@ -21,6 +21,8 @@ export const Clock = ({ mode = 'digital' }: PropsType) => {
         };
     }, []);
 
+
+
     return (
         <div>
             {mode === 'digital'
